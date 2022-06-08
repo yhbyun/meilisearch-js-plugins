@@ -16,7 +16,12 @@ import {
 import './App.css'
 import { instantMeiliSearch } from '../../../../src/index'
 
-const searchClient = instantMeiliSearch('http://localhost:7700', 'masterKey', {
+console.log({ ENV: process.env.MEILISEARCH_HOST })
+
+const MASTER_KEY = 'masterKey'
+const HOST = process.env.MEILISEARCH_HOST || 'http://127.0.0.1:7700'
+
+const searchClient = instantMeiliSearch(HOST, MASTER_KEY, {
   paginationTotalHits: 60,
   primaryKey: 'id',
 })
@@ -64,6 +69,8 @@ const App = () => (
           hitsPerPage={6}
           attributesToSnippet={['description:50']}
           snippetEllipsisText={'...'}
+          highlightPreTag="<div>"
+          highlightPostTag="</div>"
         />
       </div>
       <div className="right-panel">

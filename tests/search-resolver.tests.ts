@@ -1,4 +1,4 @@
-import { Movies } from './assets/utils'
+import { Movies, HOST } from './assets/utils'
 import { instantMeiliSearch } from '../src'
 import { MeiliSearch } from 'meilisearch'
 import { mocked } from 'ts-jest/utils'
@@ -41,12 +41,12 @@ describe('Pagination browser test', () => {
         query: '',
       },
     }
-    const searchClient = instantMeiliSearch('http://localhost:7700')
+    const searchClient = instantMeiliSearch(HOST)
     await searchClient.search<Movies>([searchParameters])
     await searchClient.search<Movies>([searchParameters])
 
     expect(mockedMeilisearch).toHaveBeenCalledWith({
-      host: 'http://localhost:7700',
+      host: HOST,
       apiKey: '',
     })
     expect(mockedSearch).toHaveBeenCalledTimes(1)
@@ -66,12 +66,12 @@ describe('Pagination browser test', () => {
         query: 'other query',
       },
     }
-    const searchClient = instantMeiliSearch('http://localhost:7700')
+    const searchClient = instantMeiliSearch(HOST)
     await searchClient.search<Movies>([searchParameters1])
     await searchClient.search<Movies>([searchParameters2])
 
     expect(mockedMeilisearch).toHaveBeenCalledWith({
-      host: 'http://localhost:7700',
+      host: HOST,
       apiKey: '',
     })
     expect(mockedSearch).toHaveBeenCalledTimes(2)
@@ -91,13 +91,13 @@ describe('Pagination browser test', () => {
         query: 'other query',
       },
     }
-    const searchClient = instantMeiliSearch('http://localhost:7700')
+    const searchClient = instantMeiliSearch(HOST)
     await searchClient.search<Movies>([searchParameters1])
     await searchClient.search<Movies>([searchParameters2])
     await searchClient.search<Movies>([searchParameters1])
 
     expect(mockedMeilisearch).toHaveBeenCalledWith({
-      host: 'http://localhost:7700',
+      host: HOST,
       apiKey: '',
     })
     expect(mockedSearch).toHaveBeenCalledTimes(2)
@@ -117,14 +117,14 @@ describe('Pagination browser test', () => {
         query: 'other query',
       },
     }
-    const searchClient = instantMeiliSearch('http://localhost:7700')
+    const searchClient = instantMeiliSearch(HOST)
     await searchClient.search<Movies>([searchParameters1])
     await searchClient.search<Movies>([searchParameters2])
     await searchClient.search<Movies>([searchParameters1])
     await searchClient.search<Movies>([searchParameters2])
 
     expect(mockedMeilisearch).toHaveBeenCalledWith({
-      host: 'http://localhost:7700',
+      host: HOST,
       apiKey: '',
     })
     expect(mockedSearch).toHaveBeenCalledTimes(2)

@@ -5,8 +5,11 @@ const {
   instantMeiliSearch: CJSinstantMeiliSearch,
 } = require('../dist/instant-meilisearch.cjs')
 
-const UMDclient = UMDinstantMeiliSearch('http://localhost:7700', 'masterKey')
-const CJSclient = CJSinstantMeiliSearch('http://localhost:7700', 'masterKey')
+const MASTER_KEY = 'masterKey'
+const HOST = process.env.MEILISEARCH_HOST || 'http://127.0.0.1:7700'
+
+const UMDclient = UMDinstantMeiliSearch(HOST, MASTER_KEY)
+const CJSclient = CJSinstantMeiliSearch(HOST, MASTER_KEY)
 const instantsearch = require('instantsearch.js')
 
 test('UMD client should correctly created', () => {

@@ -1,6 +1,10 @@
 import { instantMeiliSearch } from '../../src'
 import { MeiliSearch } from 'meilisearch'
 
+// testing
+const MASTER_KEY = 'masterKey'
+const HOST = process.env.MEILISEARCH_HOST || 'http://127.0.0.1:7700'
+
 const dataset = [
   {
     id: 2,
@@ -219,13 +223,13 @@ export type Movies = {
   _highlightResult?: Movies
 }
 
-const searchClient = instantMeiliSearch('http://localhost:7700', 'masterKey')
+const searchClient = instantMeiliSearch(HOST, 'masterKey')
 const wrongSearchClient = instantMeiliSearch(
-  'http://localhost:7777',
+  HOST.replace('7777', '7700'),
   'masterKey'
 )
 const meilisearchClient = new MeiliSearch({
-  host: 'http://localhost:7700',
+  host: HOST,
   apiKey: 'masterKey',
 })
 
@@ -235,4 +239,6 @@ export {
   wrongSearchClient,
   geoDataset,
   meilisearchClient,
+  MASTER_KEY,
+  HOST,
 }

@@ -1,9 +1,12 @@
 const { MeiliSearch } = require('meilisearch')
 
+const MASTER_KEY = 'masterKey'
+const HOST = process.env.MEILISEARCH_HOST || 'http://127.0.0.1:7700'
+
 ;(async () => {
   const client = new MeiliSearch({
-    host: 'http://127.0.0.1:7700',
-    apiKey: 'masterKey',
+    host: HOST,
+    apiKey: MASTER_KEY,
   })
 
   const index = client.index('steam-video-games')

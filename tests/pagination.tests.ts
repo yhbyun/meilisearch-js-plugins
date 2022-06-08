@@ -4,6 +4,8 @@ import {
   dataset,
   Movies,
   meilisearchClient,
+  HOST,
+  MASTER_KEY,
 } from './assets/utils'
 
 describe('Pagination browser test', () => {
@@ -97,13 +99,9 @@ describe('Pagination browser test', () => {
   })
 
   test('Test pagination total hits ', async () => {
-    const customClient = instantMeiliSearch(
-      'http://localhost:7700',
-      'masterKey',
-      {
-        paginationTotalHits: 1,
-      }
-    )
+    const customClient = instantMeiliSearch(HOST, MASTER_KEY, {
+      paginationTotalHits: 1,
+    })
     const response = await customClient.search<Movies>([
       {
         indexName: 'movies',
@@ -114,13 +112,9 @@ describe('Pagination browser test', () => {
   })
 
   test('Test zero pagination total hits ', async () => {
-    const customClient = instantMeiliSearch(
-      'http://localhost:7700',
-      'masterKey',
-      {
-        paginationTotalHits: 0,
-      }
-    )
+    const customClient = instantMeiliSearch(HOST, MASTER_KEY, {
+      paginationTotalHits: 0,
+    })
     const response = await customClient.search<Movies>([
       {
         indexName: 'movies',
@@ -131,13 +125,9 @@ describe('Pagination browser test', () => {
   })
 
   test('Test bigger pagination total hits than nbr hits', async () => {
-    const customClient = instantMeiliSearch(
-      'http://localhost:7700',
-      'masterKey',
-      {
-        paginationTotalHits: 1000,
-      }
-    )
+    const customClient = instantMeiliSearch(HOST, MASTER_KEY, {
+      paginationTotalHits: 1000,
+    })
     const response = await customClient.search<Movies>([
       {
         indexName: 'movies',
@@ -148,13 +138,9 @@ describe('Pagination browser test', () => {
   })
 
   test('Test bigger pagination total hits than nbr hits', async () => {
-    const customClient = instantMeiliSearch(
-      'http://localhost:7700',
-      'masterKey',
-      {
-        paginationTotalHits: 1000,
-      }
-    )
+    const customClient = instantMeiliSearch(HOST, MASTER_KEY, {
+      paginationTotalHits: 1000,
+    })
     const response = await customClient.search<Movies>([
       {
         indexName: 'movies',
@@ -165,14 +151,10 @@ describe('Pagination browser test', () => {
   })
 
   test('Test pagination total hits with finite pagination', async () => {
-    const customClient = instantMeiliSearch(
-      'http://localhost:7700',
-      'masterKey',
-      {
-        paginationTotalHits: 5,
-        finitePagination: true,
-      }
-    )
+    const customClient = instantMeiliSearch(HOST, MASTER_KEY, {
+      paginationTotalHits: 5,
+      finitePagination: true,
+    })
     const response = await customClient.search<Movies>([
       {
         indexName: 'movies',
@@ -183,14 +165,10 @@ describe('Pagination browser test', () => {
   })
 
   test('Test pagination total hits with infinite pagination', async () => {
-    const customClient = instantMeiliSearch(
-      'http://localhost:7700',
-      'masterKey',
-      {
-        paginationTotalHits: 5,
-        finitePagination: true,
-      }
-    )
+    const customClient = instantMeiliSearch(HOST, MASTER_KEY, {
+      paginationTotalHits: 5,
+      finitePagination: true,
+    })
     const response = await customClient.search<Movies>([
       {
         indexName: 'movies',

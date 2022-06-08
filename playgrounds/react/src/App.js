@@ -65,7 +65,7 @@ const App = () => (
         <h2>Misc</h2>
         <RefinementList attribute="misc" />
         <Configure
-          hitsPerPage={6}
+          // hitsPerPage={6}
           attributesToSnippet={['description:50']}
           snippetEllipsisText={'...'}
         />

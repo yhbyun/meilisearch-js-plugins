@@ -1,9 +1,10 @@
 import { instantMeiliSearch } from '../src'
 import {
-  searchClient,
   dataset,
   Movies,
   meilisearchClient,
+  HOST,
+  MASTER_KEY,
 } from './assets/utils'
 
 describe('Pagination browser test', () => {
@@ -20,14 +21,10 @@ describe('Pagination browser test', () => {
   })
 
   test('Test placeholdersearch set to false', async () => {
-    const customClient = instantMeiliSearch(
-      'http://localhost:7700',
-      'masterKey',
-      {
-        paginationTotalHits: 5,
-        placeholderSearch: true,
-      }
-    )
+    const customClient = instantMeiliSearch(HOST, MASTER_KEY, {
+      paginationTotalHits: 5,
+      placeholderSearch: true,
+    })
     const response = await customClient.search<Movies>([
       {
         indexName: 'movies',
@@ -38,14 +35,10 @@ describe('Pagination browser test', () => {
   })
 
   test('Test placeholdersearch set to true', async () => {
-    const customClient = instantMeiliSearch(
-      'http://localhost:7700',
-      'masterKey',
-      {
-        paginationTotalHits: 5,
-        placeholderSearch: false,
-      }
-    )
+    const customClient = instantMeiliSearch(HOST, MASTER_KEY, {
+      paginationTotalHits: 5,
+      placeholderSearch: false,
+    })
     const response = await customClient.search<Movies>([
       {
         indexName: 'movies',
