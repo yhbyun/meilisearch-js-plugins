@@ -1,90 +1,122 @@
 [
-  {
-    "id": 1,
-    "title": "Carol",
-    "genres": [
-      "Romance",
-      "Drama"
-    ],
-    "color": [
-      "red"
-    ],
-    "platforms": [
-      "MacOS",
-      "Linux",
-      "Windows"
-    ]
-  },
-  {
-    "id": 2,
-    "title": "Wonder Woman",
-    "genres": [
-      "Action",
-      "Adventure"
-    ],
-    "color": [
-      "green"
-    ],
-    "platforms": [
-      "MacOS"
-    ]
-  },
-  {
-    "id": 3,
-    "title": "Life of Pi",
-    "genres": [
-      "Adventure",
-      "Drama"
-    ],
-    "color": [
-      "blue"
-    ],
-    "platforms": [
-      "Windows"
-    ]
-  },
-  {
-    "id": 4,
-    "title": "Mad Max: Fury Road",
-    "genres": [
-      "Adventure",
-      "Science Fiction"
-    ],
-    "color": [
-      "red"
-    ],
-    "platforms": [
-      "MacOS",
-      "Linux"
-    ]
-  },
-  {
-    "id": 5,
-    "title": "Moana",
-    "genres": [
-      "Fantasy",
-      "Action"
-    ],
-    "color": [
-      "red"
-    ],
-    "platforms": [
-      "Windows"
-    ]
-  },
-  {
-    "id": 6,
-    "title": "Philadelphia",
-    "genres": [
-      "Drama"
-    ],
-    "color": [
-      "blue"
-    ],
-    "platforms": [
-      "MacOS",
-      "Linux",
-      "Windows"
-    ]
-  }
+ {
+   "id":1,
+   "title": "Don Quixote",
+   "genres": ["Satire","Fiction"],
+   "publisher": "Penguin Classics",
+   "language": "Spanish",
+   "authors": "Miguel de Cervantes",
+   "description":"",
+   "format": "Hardcover"
+ },
+ {
+   "id":2,
+   "title": "The Travels of Ibn Battuta",
+   "genres": ["Travel","Adventure"],
+   "publisher": "Dover Publications",
+   "language": "English",
+   "authors": "Ibn Battuta",
+   "description":"",
+   "format": "Hardcover"
+ },
+ {
+  "id":3,
+  "title": "Les Misérables",
+  "genres": ["Tragedy", "Fiction", "Novel", "Historical Fiction", "Literature", "Classics"],
+  "publisher": "Simon & Schuster",
+  "language": "French",
+  "authors": "Victor Hugo",
+  "description":"",
+  "format": "Hardcover"
+},
+ {
+   "id":4,
+   "title": "James and the Giant Peach",
+   "genres": ["Novel","Children's Literature", "Fantasy"],
+   "publisher": "Puffin Books",
+   "language": "English",
+   "authors": "Roald Dahl",
+   "description":"",
+   "format": "Paperback"
+ },
+ {
+   "id":5,
+   "title": "Hard Times",
+   "genres": ["Classics","Fiction", "Victorian", "Literature"],
+   "publisher": "Penguin Classics",
+   "language": "English",
+   "authors": "Charles Dickens",
+   "description":"",
+   "format": "Hardcover"
+ },
+ {
+   "id":6,
+   "title": "Pride and Prejudice",
+   "genres": ["Classics","Fiction", "Romance", "Literature"],
+   "publisher": "Penguin Classics",
+   "language": "English",
+   "authors": "Jane Austen",
+   "description":"",
+   "format": "Hardcover"
+ },
+ {
+  "id":7,
+  "title": "Diary of a Wimpy Kid",
+  "genres": ["Humor", "Fiction", "Young Adult", "Comedy","Diary Fiction"],
+  "publisher": "",
+  "language": "English",
+  "authors": "Jeff Kinney",
+  "description":"",
+  "format": "Hardcover"
+},
+{
+  "id":8,
+  "title": "Anne of Green Gables",
+  "genres": ["Literature", "Fiction", "Novel", "Classic Fiction", "Comedy", "Coming-of-Age"],
+  "publisher": "Wordsworth Editions Ltd",
+  "language": "English",
+  "authors": "Lucy Maud Montgomery",
+  "description":"",
+  "format": "Hardcover"
+},
+{
+  "id":9,
+  "title": "Harry Potter and the Chamber of Secrets",
+  "genres": ["Fantasy", "Fiction", "Magic", "Adventure", "Young Adult"],
+  "publisher": "Bloomsbury Publishing PLC",
+  "language": "English",
+  "authors": "J.K. Rowling",
+  "description":"",
+  "format": "Paperback"
+},
+{
+  "id":10,
+  "title": "David Copperfield",
+  "genres": ["Classics","Fiction", "Victorian", "Literature"],
+  "publisher": "Penguin UK",
+  "language": "English",
+  "authors": "Charles Dickens",
+  "description":"",
+  "format": "Hardcover"
+},
+{
+  "id":11,
+  "title": "Dracula",
+  "genres": ["Classics","Fiction", "Horror", "Literature", "Vampires", "Fantasy"],
+  "publisher": "Penguin UK",
+  "language": "English",
+  "authors": "Bram Stoker",
+  "description":"",
+  "format": "Hardcover"
+},
+{
+  "id":12,
+  "title": "Frankenstein",
+  "genres": ["Classics","Fiction", "Horror", "Literature", "Fantasy"],
+  "publisher": "Penguin UK",
+  "language": "English",
+  "authors": "Mary Wollstonecraft Shelley",
+  "description":"",
+  "format": "Hardcover"
+}
 ]

@@ -11,7 +11,7 @@ import {
 } from 'react-instantsearch-dom'
 import { instantMeiliSearch } from '@meilisearch/instant-meilisearch'
 
-const searchClient = instantMeiliSearch('http://localhost:7700', 'masterKey', {
+const searchClient = instantMeiliSearch('http://localhost:7700', '1VV9h--7f0L4m7DRvZQ7w06zj03S6JfdgleUi0A-b6g', {
   primaryKey: 'id',
   keepZeroFacets: true,
 })
@@ -25,12 +25,15 @@ const SingleIndex = () => (
       <Stats />
       <div className="left-panel">
         <ClearRefinements />
+        <h2>Language</h2>
+        <RefinementList attribute="language" operator="or"/>
         <h2>Genres</h2>
-        <RefinementList attribute="genres" />
-        <h2>Players</h2>
-        <RefinementList attribute="color" />
-        <h2>Platforms</h2>
-        <RefinementList attribute="platforms" />
+        <RefinementList attribute="genres" operator="or" />
+        
+        <h2>Author</h2>
+        <RefinementList attribute="authors" operator="or"/>
+        <h2>Format</h2>
+        <RefinementList attribute="format" operator="or"/>
       </div>
       <div className="right-panel">
         <SearchBox />
@@ -50,10 +53,16 @@ const Hit = ({ hit }) => {
         <Highlight attribute="genres" hit={hit} />
       </div>
       <div className="hit-name">
-        <Highlight attribute="color" hit={hit} />
+        <Highlight attribute="authors" hit={hit} />
       </div>
       <div className="hit-name">
-        <Highlight attribute="platforms" hit={hit} />
+        <Highlight attribute="publisher" hit={hit} />
+      </div>
+      <div className="hit-name">
+        <Highlight attribute="language" hit={hit} />
+      </div>
+      <div className="hit-name">
+        <Highlight attribute="format" hit={hit} />
       </div>
     </div>
   )

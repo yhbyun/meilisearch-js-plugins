@@ -12,7 +12,7 @@ import {
 } from 'react-instantsearch-dom'
 import { instantMeiliSearch } from '@meilisearch/instant-meilisearch'
 
-const searchClient = instantMeiliSearch('http://localhost:7700', 'masterKey', {
+const searchClient = instantMeiliSearch('http://localhost:7700', '1VV9h--7f0L4m7DRvZQ7w06zj03S6JfdgleUi0A-b6g', {
   primaryKey: 'id',
   finitePagination: true,
   keepZeroFacets: true,

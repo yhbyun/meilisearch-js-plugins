@@ -5,7 +5,7 @@ const games = require('./assets/games.json')
 ;(async () => {
   const client = new MeiliSearch({
     host: 'http://127.0.0.1:7700',
-    apiKey: 'masterKey',
+    apiKey: '1VV9h--7f0L4m7DRvZQ7w06zj03S6JfdgleUi0A-b6g',
   })
 
   const moviesIndex = client.index('movies')
@@ -15,7 +15,7 @@ const games = require('./assets/games.json')
   await gamesIndex.delete()
 
   await moviesIndex.updateSettings({
-    filterableAttributes: ['genres', 'color', 'platforms'],
+    filterableAttributes: ['genres', 'publisher', 'language', 'authors', 'format'],
   })
   await gamesIndex.updateSettings({
     filterableAttributes: ['genres', 'color', 'platforms', 'misc', 'players'],
@@ -30,4 +30,6 @@ const games = require('./assets/games.json')
   const gamesTask = await client.waitForTask(gamesRes.taskUid)
   console.log(moviesTask)
   console.log(gamesTask)
+  const res = await client.index("movies").search("", { filter: [['genres=fiction', 'genres=literature']] })
+  console.log(res)
 })()

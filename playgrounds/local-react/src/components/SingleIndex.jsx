@@ -14,7 +14,7 @@ import {
 } from 'react-instantsearch-dom'
 import { instantMeiliSearch } from '@meilisearch/instant-meilisearch'
 
-const searchClient = instantMeiliSearch('http://localhost:7700', 'masterKey', {
+const searchClient = instantMeiliSearch('http://localhost:7700', '1VV9h--7f0L4m7DRvZQ7w06zj03S6JfdgleUi0A-b6g', {
   primaryKey: 'id',
 })
 
@@ -50,13 +50,13 @@ const SingleIndex = () => (
           ]}
         />
         <h2>Genres</h2>
-        <RefinementList attribute="genres" />
+        <RefinementList attribute="genres" operator="and" />
         <h2>Players</h2>
-        <RefinementList attribute="players" />
+        <RefinementList attribute="players" operator="and" />
         <h2>Platforms</h2>
-        <RefinementList attribute="platforms" />
+        <RefinementList attribute="platforms" operator="and" />
         <h2>Misc</h2>
-        <RefinementList attribute="misc" />
+        <RefinementList attribute="misc"operator="and" />
         <Configure
           hitsPerPage={6}
           attributesToSnippet={['description:50']}
