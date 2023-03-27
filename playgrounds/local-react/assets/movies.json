@@ -6,7 +6,8 @@
   "language": "English",
   "authors": "Charles Dickens",
   "description":"",
-  "format": "Hardcover"
+  "format": "Hardcover",
+  "rating": 3
 },
   {
     "id":1,
@@ -16,7 +17,8 @@
     "language": "Spanish",
     "authors": "Miguel de Cervantes",
     "description":"",
-    "format": "Hardcover"
+    "format": "Hardcover",
+    "rating": 4
   },
   {
     "id":2,
@@ -26,7 +28,8 @@
     "language": "English",
     "authors": "Ibn Battuta",
     "description":"",
-    "format": "Hardcover"
+    "format": "Hardcover",
+    "rating": 4.5
   },
   {
    "id":3,
@@ -36,7 +39,8 @@
    "language": "French",
    "authors": "Victor Hugo",
    "description":"",
-   "format": "Hardcover"
+   "format": "Hardcover",
+   "rating": 4.7
  },
   {
     "id":4,
@@ -46,7 +50,8 @@
     "language": "English",
     "authors": "Roald Dahl",
     "description":"",
-    "format": "Paperback"
+    "format": "Paperback",
+    "rating": 4
   },
   {
     "id":6,
@@ -56,7 +61,8 @@
     "language": "English",
     "authors": "Jane Austen",
     "description":"",
-    "format": "Hardcover"
+    "format": "Hardcover",
+    "rating": 4
   },
   {
    "id":7,
@@ -66,7 +72,8 @@
    "language": "English",
    "authors": "Jeff Kinney",
    "description":"",
-   "format": "Hardcover"
+   "format": "Hardcover",
+   "rating": 4.8
  },
  {
    "id":8,
@@ -76,7 +83,8 @@
    "language": "English",
    "authors": "Lucy M. Montgomery",
    "description":"",
-   "format": "Hardcover"
+   "format": "Hardcover",
+   "rating": 4
  },
  {
    "id":9,
@@ -86,7 +94,8 @@
    "language": "English",
    "authors": "J.K. Rowling",
    "description":"",
-   "format": "Paperback"
+   "format": "Paperback",
+   "rating": 2
  },
  {
    "id":10,
@@ -96,7 +105,8 @@
    "language": "English",
    "authors": "Charles Dickens",
    "description":"",
-   "format": "Hardcover"
+   "format": "Hardcover",
+   "rating": 3.9
  },
  {
    "id":11,
@@ -106,7 +116,8 @@
    "language": "English",
    "authors": "Bram Stoker",
    "description":"",
-   "format": "Hardcover"
+   "format": "Hardcover",
+   "rating": 2.5
  },
  {
    "id":12,
@@ -116,7 +127,8 @@
    "language": "English",
    "authors": "Mary Shelley",
    "description":"",
-   "format": "Hardcover"
+   "format": "Hardcover",
+   "rating": 3
  },
  {
   "id":13,
@@ -126,7 +138,8 @@
   "language": "French",
   "authors": "Gustave Flaubert",
   "description":"",
-  "format": "Hardcover"
+  "format": "Hardcover",
+  "rating": 4
 }
  ]
  
