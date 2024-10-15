@@ -82,6 +82,9 @@ export function MeiliParamsCreator(searchContext: SearchContext) {
     pagination,
     sort,
     restrictSearchableAttributes,
+    matchingStrategy,
+    rankingScoreThreshold,
+    showRankingScore,
     meiliSearchParams: overrideParams,
   } = searchContext
   const meiliSearchParams: MeiliSearchMultiSearchParams = { indexUid }
@@ -210,13 +213,13 @@ export function MeiliParamsCreator(searchContext: SearchContext) {
       }
     },
     addMatchingStrategy() {
-      const value = overrideParams?.matchingStrategy
+      const value = overrideParams?.matchingStrategy ?? matchingStrategy
       if (value !== undefined) {
         meiliSearchParams.matchingStrategy = value
       }
     },
     addShowRankingScore() {
-      const value = overrideParams?.showRankingScore
+      const value = overrideParams?.showRankingScore ?? showRankingScore
       if (value !== undefined) {
         meiliSearchParams.showRankingScore = value
       }
@@ -245,7 +248,7 @@ export function MeiliParamsCreator(searchContext: SearchContext) {
       }
     },
     addRankingScoreThreshold() {
-      const value = overrideParams?.rankingScoreThreshold
+      const value = overrideParams?.rankingScoreThreshold ?? rankingScoreThreshold
       if (value !== undefined) {
         meiliSearchParams.rankingScoreThreshold = value
       }

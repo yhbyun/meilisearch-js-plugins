@@ -8,6 +8,7 @@ import type {
   MultiSearchResult,
   Config as MeilisearchConfig,
   MeiliSearch,
+  MatchingStrategies,
 } from 'meilisearch'
 
 // Turns readonly types into mutable ones
@@ -114,6 +115,9 @@ export type SearchContext = InstantMeiliSearchOptions &
     pagination: PaginationState
     indexUid: string
     sort?: string | string[]
+    matchingStrategy?: MatchingStrategies
+    rankingScoreThreshold?: number
+    showRankingScore?: boolean
   }
 
 export type InstantSearchGeoParams = {
